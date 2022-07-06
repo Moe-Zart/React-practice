@@ -5,6 +5,11 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+.javascript-bar{
+  display: flex;
+  justify-content: space-around;
+}
 nav {
   background-color: rgb(85, 85, 85);
   height: 165px;
@@ -26,8 +31,11 @@ nav {
   list-style-type: none;
   text-decoration: underline;
 }
+main{
+  min-height: calc(100vh - 165px - 60px - 22px);
+}
 .container {
-  margin: 40px;
+  padding: 40px;
 }
 .myName {
   font-size: 76px;
