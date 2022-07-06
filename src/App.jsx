@@ -13,18 +13,18 @@ function App() {
   let message = "Good";
   if (hours < 12) {
     message += " Morning";
-  } else if (hours >= 12 && hours < 17) {
+  } else if (hours >= 12 && hours < 18) {
     message += " Afternoon";
   } else {
     message += " Night";
-  }
+  } 
   //
   //HTML
   return (
     <div className="App">
       <div className="javascript-bar">
         <div>{websiteFramework + "-" + websiteTitle}</div>
-        <div>{message + "!"}</div>
+        <div className="message">{message + "!"}</div>
       </div>
       <Nav />
       <MainContent />

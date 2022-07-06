@@ -10,6 +10,10 @@
   display: flex;
   justify-content: space-around;
 }
+.message{
+  color: rgb(97, 36, 240);
+  font-weight: bold;
+}
 nav {
   background-color: rgb(85, 85, 85);
   height: 165px;
