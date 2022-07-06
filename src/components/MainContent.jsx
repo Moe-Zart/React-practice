@@ -2,7 +2,7 @@ import React from "react";
 
 const MyInfo = () => {
   return (
-    <div>
+    <main>
       <h1 className="myName">Mohamed Zreika</h1>
       <p className="myBlurb">
         I am a self-taught frontend software developer who wants to learn react
@@ -13,7 +13,7 @@ const MyInfo = () => {
         <li className="myVacationSpot Dubai">Dubai</li>
         <li className="myVacationSpot">Italy</li>
       </ul>
-    </div>
+    </main>
   );
 };
 

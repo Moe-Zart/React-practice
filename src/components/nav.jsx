@@ -1,13 +1,15 @@
-import React from 'react';
+import React from "react";
 
 const Nav = () => {
-    return (
-            <ul>
-                <li>one</li>
-                <li>two</li>
-                <li>three</li>
-            </ul>
-    );
-}
+  return (
+    <nav>
+      <ul>
+        <li>one</li>
+        <li>two</li>
+        <li>three</li>
+      </ul>
+    </nav>
+  );
+};
 
 export default Nav;
