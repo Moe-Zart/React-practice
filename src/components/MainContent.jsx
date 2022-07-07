@@ -16,15 +16,20 @@ const MyInfo = () => {
           <li className="myVacationSpot">Italy</li>
         </ul>
       </div>
-      <Joke
-        question="Whats the difference between a snowman and snowwoman?"
-        punchLine="Snowballs"
-      />
-      <Joke
-        question="Why couldn't the bicycle stand up"
-        punchLine="Because it was two tired!"
-      />
-      <Joke punchLine="To the person who stole my copy of Microsoft Office, I will find you. You have my word." />
+      <div className="jokes-container">
+        <h2>My Jokes</h2>
+        <div className="jokes">
+          <Joke
+            question="Whats the difference between a snowman and snowwoman?"
+            punchLine="Snowballs"
+          />
+          <Joke
+            question="Why couldn't the bicycle stand up"
+            punchLine="Because it was two tired!"
+          />
+          <Joke punchLine="To the person who stole my copy of Microsoft Office, I will find you. You have my word." />
+        </div>
+      </div>
     </main>
   );
 };
