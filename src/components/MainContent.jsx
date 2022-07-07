@@ -1,5 +1,5 @@
 import React from "react";
-
+import Joke from "./Joke";
 const MyInfo = () => {
   return (
     <main>
@@ -16,6 +16,15 @@ const MyInfo = () => {
           <li className="myVacationSpot">Italy</li>
         </ul>
       </div>
+      <Joke
+        question="Whats the difference between a snowman and snowwoman?"
+        punchLine="Snowballs"
+      />
+      <Joke
+        question="Why couldn't the bicycle stand up"
+        punchLine="Because it was two tired!"
+      />
+      <Joke punchLine="To the person who stole my copy of Microsoft Office, I will find you. You have my word." />
     </main>
   );
 };
