@@ -1,6 +1,9 @@
 import React from "react";
 import Joke from "./Joke";
+import jokesData from "./jokesData";
 const MyInfo = () => {
+  const jokeComponents = jokesData.map((joke)=> <Joke question={joke.question} punchLine={joke.punchLine}/>)
+  //here we map through the jokesData and make each joke have the question from the jokesData and the punchline, while maintaining the properties of Joke.jsx
   return (
     <main>
       <div className="container">
@@ -19,15 +22,7 @@ const MyInfo = () => {
       <div className="jokes-container">
         <h2>My Jokes</h2>
         <div className="jokes">
-          <Joke
-            question="Whats the difference between a snowman and snowwoman?"
-            punchLine="Snowballs"
-          />
-          <Joke
-            question="Why couldn't the bicycle stand up"
-            punchLine="Because it was two tired!"
-          />
-          <Joke punchLine="To the person who stole my copy of Microsoft Office, I will find you. You have my word." />
+          {jokeComponents}
         </div>
       </div>
     </main>
