@@ -1,4 +1,4 @@
-import React, {Component} from "react";
+import React from "react";
 import "./App.css";
 import Nav from "./components/Nav";
 import MainContent from "./components/MainContent";
@@ -29,11 +29,19 @@ class App extends React.Component {
 }
 
 class Header extends React.Component {
+  //when using a constructor, always add super
+  constructor(){
+    super()
+    this.state ={
+      addressTitle: "Master"
+      //This state is like props, except it can be changed
+    }
+  }
   render(props) {
     //note: always use 'this' for objects in aclass
     return (
       <header>
-        <p>Weclome, {this.props.username}!</p>
+        <p>Weclome, {this.state.addressTitle} {this.props.username}!</p>
       </header>
     );
   }
