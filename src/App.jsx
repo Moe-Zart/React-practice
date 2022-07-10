@@ -16,7 +16,9 @@ class App extends React.Component {
       <div className="App">
         <div className="javascript-bar">
           <div>{websiteFramework + "-" + websiteTitle}</div>
-          <div className="message"><Greeting/>!</div>
+          <div className="message">
+            <Greeting />!
+          </div>
         </div>
         <Nav />
         <Header username="Mohamed" />
@@ -30,18 +32,21 @@ class App extends React.Component {
 
 class Header extends React.Component {
   //when using a constructor, always add super
-  constructor(){
-    super()
-    this.state ={
-      addressTitle: "Master"
+  constructor() {
+    super();
+    this.state = {
+      addressTitle: "Master",
       //This state is like props, except it can be changed
-    }
+    };
   }
   render(props) {
     //note: always use 'this' for objects in aclass
     return (
       <header>
-        <p>Weclome, {this.state.addressTitle} {this.props.username}!</p>
+        <p>
+          Weclome, {this.state.addressTitle} {this.props.username}!
+        </p>
+        <Logged />
       </header>
     );
   }
@@ -59,7 +64,29 @@ class Greeting extends React.Component {
     } else {
       message += "Night";
     }
-    return (message);
+    return message;
   }
 }
+
+class Logged extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      isLoggedIn: true,
+    };
+  }
+  render() {
+    if (this.state.isLoggedIn) {
+      this.state.isLoggedIn = "in";
+    } else {
+      this.state.isLoggedIn = "out";
+    }
+    return (
+      <div>
+        <p>You are currently logged {this.state.isLoggedIn}</p>
+      </div>
+    );
+  }
+}
+
 export default App;
