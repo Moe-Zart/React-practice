@@ -2,6 +2,7 @@ import React from "react";
 import Joke from "./Joke";
 import jokesData from "./jokesData";
 import ClassComponent from "./ClassComponent";
+import Counter from "./Counter";
 const MyInfo = () => {
   const jokeComponents = jokesData.map((joke)=> <Joke key={joke.id} question={joke.question} punchLine={joke.punchLine}/>)
   //here we map through the jokesData and make each joke have the question from the jokesData and the punchline, while maintaining the properties of Joke.jsx
@@ -27,6 +28,7 @@ const MyInfo = () => {
         </div>
       </div>
       <ClassComponent />
+      <Counter />
     </main>
   );
 };
