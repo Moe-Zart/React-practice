@@ -1,21 +1,23 @@
 import React from "react";
 
 class Counter extends React.Component {
-    constructor(){
-        super()
-        this.state={
-            counter:0
-        }
-    }
+  constructor() {
+    super();
+    this.state = {
+      counter: 0,
+    };
+  }
   render() {
-    let increment = this.state.counter
-    if(increment){
+    let increment = this.state.counter;
+    function Increment(){
         increment++
     }
-    return <div>
-        <h1>{increment}</h1>
-        <button>Change!</button>
-    </div>;
+    return (
+      <div>
+        <h1>{this.state.counter}</h1>
+        <button onClick={Increment}>Change!</button>
+      </div>
+    );
   }
 }
 
