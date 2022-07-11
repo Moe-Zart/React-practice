@@ -6,16 +6,22 @@ class Counter extends React.Component {
     this.state = {
       counter: 0,
     };
+    this.handleClick = this.handleClick.bind(this); //must bind in order to use the setState method
+  }
+  handleClick() {
+    //setState is used to change the state
+    this.setState((prev) => {
+      //prev represents the counter before the the state is changed
+      return {
+        counter: prev.counter + 1,
+      };
+    });
   }
   render() {
-    let increment = this.state.counter;
-    function Increment(){
-        increment++
-    }
     return (
       <div>
         <h1>{this.state.counter}</h1>
-        <button onClick={Increment}>Change!</button>
+        <button onClick={this.handleClick}>Change!</button>
       </div>
     );
   }
