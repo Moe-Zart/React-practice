@@ -1,18 +1,9 @@
-import React from 'react';
+import React from "react";
 
-const LoadingCondition = (props) => {
-    if (props.isLoading === true){
-        return (
-            <div>
-                <p>Loading...</p>
-            </div>
-        )
-    }
-    return (
-        <div>
-            <p> You are Currently Logged In</p>  
-        </div>
-    );
-}
+const LoadingCondition = () => {
+  return (
+        <p> You are Currently Logged In</p>
+  );
+};
 
 export default LoadingCondition;

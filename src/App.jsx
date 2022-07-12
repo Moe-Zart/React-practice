@@ -74,17 +74,17 @@ class Logged extends React.Component {
       isLoggedIn: true,
     };
   }
-  componentDidMount(){
-    setTimeout(() =>{
+  componentDidMount() {
+    setTimeout(() => {
       this.setState({
-        isLoggedIn: false
-      })
-    },2000)
+        isLoggedIn: false,
+      });
+    }, 2000);
   }
   render() {
     return (
       <div>
-        <LoadingCondition isLoading={this.state.isLoggedIn}/>
+        {this.state.isLoggedIn ? <p>Loading...</p> : <LoadingCondition />}
       </div>
     );
   }
