@@ -5,7 +5,7 @@ const Footer = () => {
         <footer>
             <div className="footerContainer">
                 <p className="footerP">
-                    Copyright Mohamed Zreika 2022
+                    Copyright © Mohamed Zreika 2022
                 </p>
             </div>
         </footer>
