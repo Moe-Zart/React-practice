@@ -3,8 +3,7 @@ import "./App.css";
 import Nav from "./components/Nav";
 import MainContent from "./components/MainContent";
 import Footer from "./components/Footer";
-import { render } from "@testing-library/react";
-
+import LoadingCondition from "./components/LoadingCondition";
 class App extends React.Component {
   render() {
     //Javascript
@@ -75,15 +74,17 @@ class Logged extends React.Component {
       isLoggedIn: true,
     };
   }
+  componentDidMount(){
+    setTimeout(() =>{
+      this.setState({
+        isLoggedIn: false
+      })
+    },2000)
+  }
   render() {
-    if (this.state.isLoggedIn) {
-      this.state.isLoggedIn = "in";
-    } else {
-      this.state.isLoggedIn = "out";
-    }
     return (
       <div>
-        <p>You are currently logged {this.state.isLoggedIn}</p>
+        <LoadingCondition isLoading={this.state.isLoggedIn}/>
       </div>
     );
   }
