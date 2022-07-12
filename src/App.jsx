@@ -73,18 +73,27 @@ class Logged extends React.Component {
     this.state = {
       isLoggedIn: true,
     };
+    this.handleClick = this.handleClick.bind(this)
   }
   componentDidMount() {
     setTimeout(() => {
       this.setState({
         isLoggedIn: false,
       });
-    }, 2000);
+    }, 1000);
+  }
+  handleClick(){
+    this.setState((prev)=> {
+      return{
+        isLoggedIn: !prev.isLoggedIn
+      }
+    })
   }
   render() {
     return (
       <div>
-        {this.state.isLoggedIn ? <p>Loading...</p> : <LoadingCondition />}
+        {this.state.isLoggedIn ? <p>You are currently Logged out</p> : <LoadingCondition />}
+        <button onClick={this.handleClick}>Log {this.state.isLoggedIn? "in":"out"}</button>
       </div>
     );
   }

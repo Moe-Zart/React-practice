@@ -32,14 +32,15 @@ class Counter extends React.Component {
     //common usecase is removing an event listener. e.g(you want to write code for everytime someone scrolls, you can remove the event listener in this method)
   }
 
-  componentWillReceiveProps(nextProps) {    //NOT TOO IMPORTANTv 
+  /**componentWillReceiveProps(nextProps) {    //NOT TOO IMPORTANTv 
     //like when someone gives you a gift. everytime this component is receiving props, it will run this method
     //will run when the component is first mounted and when a parent component passes down props to a child component
     //Usually used to see if the incoming props are different. e.g:
     /* if (nextProps.whatever !== this.props.whatever){
             //do something
-          }*/
-  }
+          }
+  }*/
+  
   shouldComponentUpdate(nextProps, nextState) {
     // like making a decision whether to change your clothes
     // allows us to choose whether a component in our app is going to be updated/re-rendered
